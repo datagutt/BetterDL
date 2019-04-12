@@ -1,12 +1,13 @@
 {
   "update_url": "https://clients2.google.com/service/update2/crx",
 
-  "name": "BetterDL 1.0 - Improve DLive.tv",
-  "version": "1.0",
+  "name": "BetterDL 1.0.1 - Improve DLive.tv",
+  "version": "1.0.1",
   "manifest_version": 2,
   "background": {
     "scripts":["background.js"]
   },
+  "web_accessible_resources": ["inject.js"],
   "content_scripts": [
     {
       "matches": ["https://dlive.tv/*"],
