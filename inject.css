@@ -1,0 +1,10 @@
+.betterdl-theater-mode .video-play-left {
+    padding: 0px !important;
+}
+.betterdl-theater-mode .v-content[data-booted="true"] {
+    padding: 0px !important;
+    overflow: visible !important;
+}
+.betterdl-theater-mode .homepage-toolbar {
+    display: none;
+}

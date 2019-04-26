@@ -11,5 +11,5 @@ let appScript = document.body.querySelector('script[src^="/js/app"]');
 if(appScript){
     appScript.parentNode.insertBefore(script, appScript.nextSibling);
 }else{
-    document.head.appendChild(script)
+    document.head.appendChild(script);
 }
