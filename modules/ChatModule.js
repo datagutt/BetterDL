@@ -26,8 +26,9 @@ export default class ChatModule {
 
             // Preloaded messages
             Array.from(messages.children).forEach((node) => {
-                if(node && node.className == 'position-relative margint-3') {
-                    this.onChatMessage(node.children[0]);
+                if(node && node.className == 'position-relative') {
+                    console.log(node.children[0]);
+                    if(node.children[0]) this.onChatMessage(node.children[0]);
                 }
             });
         }else{
@@ -36,7 +37,7 @@ export default class ChatModule {
     }
     onChatMessage = entry => {
         // Get the actual text of the message
-        let textNode = entry.querySelector('.chatrow-inner .text');
+        let textNode = entry.querySelector('.chatrow-inner .linkify');
         // If this is not a text node
         if(!textNode || !textNode.innerText) return;
         // Get each word
