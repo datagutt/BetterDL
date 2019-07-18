@@ -25,7 +25,7 @@ export default class ChatModule {
             });
 
             // Preloaded messages
-            Array.from(messages.children).forEach((node) => {
+            Array.from(messages.querySelector('div').children).forEach((node) => {
                 if(node && node.className == 'position-relative') {
                     console.log(node.children[0]);
                     if(node.children[0]) this.onChatMessage(node.children[0]);
