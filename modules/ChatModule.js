@@ -4,7 +4,7 @@ console.log('emotes', emotes);
 
 export default class ChatModule {
     start(){
-        const messages = document.querySelector('.v-chatroom-message .chatbody');
+        const messages = document.querySelector('#chatroom #chat-body .chatbody');
         let chatMagicDone =
             messages &&
             messages.getAttribute('data-betterdl') === "true";
@@ -25,7 +25,7 @@ export default class ChatModule {
             });
 
             // Preloaded messages
-            Array.from(messages.querySelector('div').children).forEach((node) => {
+            Array.from(messages.querySelectorAll('div')).forEach((node) => {
                 if(node && node.className == 'position-relative') {
                     console.log(node.children[0]);
                     if(node.children[0]) this.onChatMessage(node.children[0]);
